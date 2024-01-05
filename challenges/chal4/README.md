@@ -1,4 +1,4 @@
-## Task 4 - Docker & Networking
+## Challenge 4 - Docker & Networking
 
 this was an easier one so I just wrote some bash scripts for part 1 and 2
 
