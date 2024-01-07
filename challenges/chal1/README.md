@@ -1,6 +1,6 @@
 ## Challenge 1 - Gain Access to a Remote Server
 
-started by downloading and booting into the vm with virtualbox and now I logged in as guest user.
+was expecting to gain root privilege and then there sshould be something in `/root` folder so started by downloading and booting into the vm with virtualbox and now I logged in as guest user.
 
 ran `ss -tunl` to know all open ports and found a http server on port 80, a mysql server at 3306 and a CUPS server at 631.
 
