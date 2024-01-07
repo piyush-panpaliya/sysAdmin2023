@@ -27,7 +27,7 @@ well this was like butter but now for Ruby app
 
 first of all cloned it and made a simple docker file obviously with `ruby:latest` image but to my surprise the repo is 9 years old so had to change the version of ruby `2.3.1`. Well everything worked but then bundler version didnt matched so changed it manually with `gem install bundler -v "1.12.5" `.
 
-But now a big error popped up. `execjs` dep required a js runtime installed so tried installing nodejs but as apt has an old version of nodejs tried using `nodesource` but this too didnt worked then tried apt one itself but apparently the ubuntu image was so old that the apt repo url were all down now and didnt worked. so searched if there are any unofficial image that has ruby and nodejs installed but found these script to install nodejs
+But now a big error popped up. `execjs` dep required a js runtime installed so tried installing nodejs but as apt had an old version of nodejs. So, tried using `nodesource` but this too didnt worked then tried apt one itself but apparently the ubuntu image was so old that the apt repo url were all down now and didnt worked. so searched if there are any unofficial image that has ruby and nodejs installed but found these script to install nodejs
 
 ```
 RUN \
@@ -58,8 +58,8 @@ now a fresh start the next day and I had this crazy idea
 since the repo was old like 9 years old I thought why not time travel to see what could be done, yeah am not kidding all thanks to git `https://github.com/rails/execjs/tree/9e7abd095e2c0d3cd4f497384c9adf9d84f69ac3?tab=readme-ov-file` is where I landed, a 9 year old commit and now I found `therubyracer` a runtime which is now deprecated but not for my repo.
 
 just added `therubyracer` to my gemfile and BOOM everything now works
-and I had my website up and running but now it required postgres server running which I ignored since that wasnt necesaary for the challenge
+and I had my website up and running but now it required postgres server running which I ignored since that wasnt necessary for the challenge
 
 ### Network type
 
-I am using bridge network since I want to keep my containers isloadted from other containers and only exposed to host via the the ports required by the app
+I am using bridge network since I want to keep my containers isoladted from other containers and only exposed to host via the the ports required by the app.

@@ -38,4 +38,4 @@ now just throw it to a daemon
 - I am assuming when the script is run all the required containers are present in exited state atleast.
 - To add new services the script has to be restarted
 - very bad code written for haddling json and file exception
-  (was pretty tired after using ruby image from 7 years ago)
+  (was pretty tired after using ruby image from 7 years ago for chal3)
