@@ -5,8 +5,8 @@ services:
     build:
       context: ./SAIC-Website
       dockerfile: Dockerfile
-    # volumes:
-    #   - ./SAIC-Website:/usr/share/nginx/html
+    volumes:
+      - ./SAIC-Website/data:/usr/share/nginx/html/data
     ports:
       - '8080:80'
     networks:
@@ -16,8 +16,8 @@ services:
     build:
       context: ./github-languages
       dockerfile: Dockerfile
-    # volumes:
-    #   - ./github-languages:/app/data
+    volumes:
+      - ./github-languages/data:/usr/src/app/data
     ports:
       - '3000:3000'
     networks:

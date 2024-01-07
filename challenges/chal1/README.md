@@ -25,3 +25,5 @@ iloveroot
 ```
 
 commented in html. tried using this as loggin into root with su root but it didn't worked. so saw all the available user by `cat /etc/passwd` and tried for every user even tried encoding the pass with base64 and used that but it didnt worked.
+
+no ssh or ftp ports opened so cant explore that but tried logging in sql with the password but it didnt worked.

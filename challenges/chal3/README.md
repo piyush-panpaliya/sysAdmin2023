@@ -63,3 +63,29 @@ and I had my website up and running but now it required postgres server running 
 ### Network type
 
 I am using bridge network since I want to keep my containers isoladted from other containers and only exposed to host via the the ports required by the app.
+
+### Backup the volume
+
+I am using bind mount for the volume so I can just backup the folder where the volume is mounted and I will have all the data.
+the bash script used is
+
+```
+#!/bin/bash
+
+tar czf backup/saic_$(date +%Y%m%d%H%M%S).tar.gz -C SAIC-Website/data .
+tar czf backup/ruby_$(date +%Y%m%d%H%M%S).tar.gz  -C  github-languages/data .
+
+```
+
+here I am zipping all the data inside /data dir of app that is muonted at SAIC-Website/data and github-languages/data of host into backup folder
+
+now I can make it cron with
+
+```bash
+chmod +x backup.sh
+crontab -e
+# now add this and save
+55 23 * * * /home/piyush/coding/sysadmin/q3/backup.sh
+```
+
+now the backup will be created at 11:55 PM everyday
