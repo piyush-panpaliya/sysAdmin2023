@@ -59,3 +59,7 @@ Now to create multiple instances we use
 `docker-compose up -d --scale web=3` this will create 3 containers with random ports on host side and will all run same web image.
 
 now since nginx and these are in same docker network I can call web service with `web:5000` due to the internal DNS it resolves to all the IP of web service containers and nginx simply balances all the requests.
+
+so I a using a bash script that ask for number of instance to run and run the above command
+
+### Part 3
