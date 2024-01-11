@@ -7,7 +7,7 @@ ok so I am currently helping in winter project about the same so it was a llittl
 
 ### Flow:
 
-- When the scripts run for the first time it reads all the containers and stores them in a a json file `containers.json` with name and id of it.
+- When the scripts run for the first time it reads all the containers and stores them in a json file `containers.json` with name and id of it.
 - Then it starts the scheduler which runs every hour.
 - In which it reads all the containers from `containers.json` and check if the status is `running`
 - Reads previous down services from `containerStatus.json` and checks if there are new services down.
@@ -31,7 +31,7 @@ some logs
 
 PS: I have kept email template very simple and I know its **BAD**
 
-now just throw it to a daemon
+and adds the down service to `containerStatus.json` now just throw it to a daemon
 
 ### Improvements
 
