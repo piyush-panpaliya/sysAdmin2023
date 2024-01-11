@@ -21,11 +21,11 @@ CMD ["nginx", "-g", "daemon off;"]
 - open port 80 of container to host
 - run nginx in foreground to see logs
 
-well this was like butter but now for Ruby app
+well this was very smooth but now for Ruby app
 
 ### Ruby (github languages)
 
-first of all cloned it and made a simple docker file obviously with `ruby:latest` image but to my surprise the repo is 9 years old so had to change the version of ruby `2.3.1`. Well everything worked but then bundler version didnt matched so changed it manually with `gem install bundler -v "1.12.5" `.
+first of all cloned it and made a simple docker file obviously with `ruby:latest` image but to my surprise the repo is 9 years old so had to change the version of ruby `2.3.1` as given in gemfile. Well everything worked but then bundler version didnt matched so changed it manually with `gem install bundler -v "1.12.5" `.
 
 But now a big error popped up. `execjs` dep required a js runtime installed so tried installing nodejs but as apt had an old version of nodejs. So, tried using `nodesource` but this too didnt worked then tried apt one itself but apparently the ubuntu image was so old that the apt repo url were all down now and didnt worked. so searched if there are any unofficial image that has ruby and nodejs installed but found these script to install nodejs
 
