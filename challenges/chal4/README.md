@@ -62,4 +62,4 @@ now since nginx and these are in same docker network I can call web service with
 
 so I a using a bash script that ask for number of instance to run and run the above command
 
-### Part 3
+### Part 3 logging
